@@ -1,0 +1,156 @@
+/* Start Kontakbereich */
+.kontakt {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+/* leftarea */
+.left_area {
+  display: grid;
+}
+
+.kontakt_heading, .kontakt_sub {
+  position: relative;
+  grid-column: 1;
+  padding: 20px;
+  grid-row: 1/2;
+}
+
+.kontakt_heading {
+  top: 200px;
+  left: 40px;
+  rotate: -90deg;
+  opacity: 0;
+  font-size: 120px;
+  animation: slide-in2 0.5s ease-in-out 1s forwards;
+}
+
+.kontakt_sub {
+  position: relative;
+  top: 80px;
+  grid-column: 1;
+  font-size: 25pt;
+  opacity: 0;
+  animation-delay: 1s;
+  animation: slide-in 0.8s ease-in-out 1.7s forwards;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(170px);
+  }
+}
+@keyframes slide-in2 {
+  from {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* start formular */
+.contact_form {
+  grid-column: 2;
+  justify-self: center;
+  height: 400px;
+  width: 40%;
+  border-radius: 50px;
+  margin: 100px 0 0 50px;
+  display: grid;
+  background-color: transparent;
+  grid-template-rows: 1fr 1fr 3fr;
+  justify-content: center;
+  padding: 40px;
+  opacity: 0;
+  animation-delay: 1s;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.9);
+  border-top: 0.5px solid rgba(88, 85, 85, 0.3);
+  border-left: 0.5px solid rgba(88, 85, 85, 0.3);
+  animation: slide-in3 1s ease-in-out 3s forwards;
+}
+
+@keyframes slide-in3 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+input {
+  border: none;
+  border-bottom: 1px solid rgb(88, 85, 85);
+  outline: none;
+  padding: 50px;
+  background-color: #eee5e5;
+}
+input[type=text], input[type=email] {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  margin-bottom: 20px;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+  text-decoration-thickness: 2px;
+}
+
+textarea {
+  display: grid;
+  height: 140px;
+  width: 250px;
+  border: none;
+}
+
+.contact_form textarea {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #ccc;
+}
+.contact_form textarea:focus {
+  border-color: #1795ac;
+}
+
+/* button */
+button {
+  position: relative;
+  top: 50px;
+  justify-self: center;
+  height: 50px;
+  width: 100px;
+  border: 0.5px solid rgb(137, 139, 136);
+  border-radius: 10px;
+  background-color: transparent;
+  color: black;
+}
+button:hover {
+  background-color: transparent;
+  color: rgb(100, 231, 111);
+}
+button:active {
+  background-color: rgb(100, 231, 111);
+  color: rgb(0, 0, 0);
+}
+button span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: animate1 1s infinite;
+}
+
+/* Ende Kontakbereich *//*# sourceMappingURL=k_bodybereich.css.map */

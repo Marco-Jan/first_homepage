@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+  font-family: 'Inter', sans-serif;
+
+}
+
+.container_all {
+  display: grid;
+  grid-template-rows: 80px 790px 50px;
+  height: 100vh;
+}
+
+/* start header */
+header {
+  background-color: #fff;
+  color: #fff;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin: 20px 80px 10px 80px;
+  height: auto;
+  width: 150px;
+}
+
+nav {
+  margin-top: 16px;
+  background-color: #fff;
+  color: #fff;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+nav ul li {
+  display: inline-block;
+  align-items: center;
+  justify-items: space-between;
+  margin-top: 20px;
+
+
+}
+
+nav ul li a {
+  font-size: 14pt;
+  margin: 10px 80px 10px 50px;
+  text-decoration: none;
+  color: rgb(43, 40, 40);
+}
+
+nav ul li a:hover {
+  color: rgb(43, 40, 40);
+  border-bottom: 2px solid rgb(43, 40, 40);
+}
+
+/* ende header */
+
+/* Start Kontakbereich */
+
+.kontakt {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  
+}
+
+/* leftarea */
+.left_area{
+  display: grid;
+  
+
+}
+.kontakt_heading,
+.kontakt_sub {
+  position: relative;
+  grid-column: 1;
+  padding: 20px;
+  grid-row: 1 / 2;
+  
+ 
+  
+}
+.kontakt_heading{
+  top: 250px;
+  left: 40px;
+  bottom: 50px;
+  rotate: -90deg;
+  opacity: 0;
+  font-size: 120px;
+  animation: slide-in2 0.5s ease-in-out 1s forwards;
+
+}
+
+.kontakt_sub {
+  position: relative;
+  top: 140px;
+  grid-column: 1;
+  font-size: 25pt;
+  opacity: 0;
+  animation-delay: 1s;
+  animation: slide-in 0.8s ease-in-out 1.7s forwards;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(25%);
+  }
+}
+@keyframes slide-in2 {
+  from {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* start formular */
+.contact_form{
+  grid-column: 2;
+  justify-self: center;
+  height: 400px;
+  width: 40%;
+  border-radius: 50px;
+  margin: 150px 0 0 50px;
+  display: grid;
+  background-color: transparent;
+  grid-template-rows: 1fr 1fr 3fr;
+  justify-content: center;
+  padding: 40px;
+  opacity: 0;
+  animation-delay: 1s;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.9) ;
+  border-top: 0.5px solid rgb(88, 85, 85, 0.3);
+  border-left: 0.5px solid rgb(88, 85, 85, 0.3);
+  animation: slide-in3 1s ease-in-out 3s forwards;
+                    
+  
+}
+@keyframes slide-in3 {
+  0%{
+    opacity: 0;
+    ;
+  }
+  50%{
+    opacity: 0.5;
+    
+  }
+  100% {
+    opacity: 1;
+  }
+}
+ 
+
+input {
+  border: none;
+  border-bottom: 1px solid rgb(88, 85, 85);
+  outline: none;
+  padding: 50px;
+  background-color: #eee5e5;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  margin-bottom: 20px;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+  text-decoration-thickness: 2px;
+}
+
+
+textarea {
+  display: grid;
+  height: 140px;
+  width: 250px;
+  border: none;
+  
+ 
+}
+.contact_form textarea {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #ccc;
+}
+
+.contact_form textarea:focus {
+  border-color: #1795ac;
+}
+
+
+/* button */
+button{
+  position: relative;
+  top: 50px;
+  justify-self: center;
+  height: 50px;
+  width: 100px;
+  border: 0.5px solid rgb(137, 139, 136);
+  border-radius: 10px;
+  background-color: transparent;
+  color: black;
+}
+
+button:hover{
+  background-color:  transparent;
+        color: #6ef1f8;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9) ;
+                    
+}
+button:active{
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+button span:nth-child(1){
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg,transparent,#03e9f4);
+  animation: animate1 1s infinite;
+}
+
+
+
+
+
+
+
+/* Ende Kontakbereich */
+
+/* start footer */
+footer {
+  background-color: #fff;
+  color: #fff;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+.footer_list li {
+  list-style-type: none;
+  float: left;
+  font-size: 12pt;
+  margin: 10px 80px 10px 70px;
+
+}
+
+.footer_list li a {
+  color: rgb(43, 40, 40);
+  text-decoration: none;
+  display: block;
+
+}
+
+.footer_list li a:hover {
+  color: rgb(43, 40, 40);
+  border-bottom: 2px solid rgb(43, 40, 40);
+}
+
+/* ende footer */

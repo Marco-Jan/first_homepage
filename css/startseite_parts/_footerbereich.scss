@@ -1,0 +1,148 @@
+/* start footer */
+footer {
+  background-color: #fff;
+  color: #fff;
+  height: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+.footer_list li {
+  list-style-type: none;
+  float: left;
+  font-size: 12pt;
+  margin: 10px 90px 10px 70px;
+}
+.footer_list li a {
+  color: rgb(43, 40, 40);
+  text-decoration: none;
+  display: block;
+}
+.footer_list li a:hover {
+  color: rgb(43, 40, 40);
+  border-bottom: 2px solid rgb(43, 40, 40);
+}
+
+/* ende footer */
+
+/* Tablets */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container_all {
+    grid-template-rows: 60px auto 40px;
+  }
+  header {
+    height: 60px;
+  }
+  .logo {
+    margin: 10px 50px;
+    width: 120px;
+  }
+  nav {
+    height: 40px;
+  }
+  nav ul {
+    margin-left: 50px;
+  }
+  nav ul li {
+    float: left;
+  }
+  nav ul li a {
+    margin: 0 30px;
+    font-size: 14pt;
+  }
+  .container {
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .main_text {
+    display: flex;
+    margin: 20px 50px 0 50px;
+  }
+  .main_text h1 {
+    font-size: 24px;
+  }
+  .main_text p {
+    font-size: 14px;
+  }
+  .house {
+    height: auto;
+    width: 100%;
+    position: relative;
+    right: 0;
+    margin-bottom: 20px;
+  }
+  footer {
+    justify-content: center;
+  }
+  .footer_list li {
+    font-size: 12pt;
+  }
+  .footer_list li a {
+    font-size: 12pt;
+  }
+}
+/* Smartphones */
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .container_all {
+    grid-template-rows: 60px auto 40px;
+  }
+  header {
+    height: 60px;
+  }
+  .logo {
+    margin: 10px 50px;
+    width: 120px;
+  }
+  nav {
+    height: 40px;
+  }
+  nav ul {
+    margin-left: 20px;
+  }
+  nav ul li a {
+    margin: 0 30px;
+    font-size: 14pt;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .main_text {
+    display: flex;
+    left: 0;
+    top: 0;
+    width: 60%;
+    top: 150px;
+  }
+  .main_text h1 {
+    font-size: 34px;
+  }
+  .main_text p {
+    font-size: 24px;
+  }
+  .house {
+    height: auto;
+    width: 100%;
+    position: relative;
+    right: 0;
+    top: 50px;
+  }
+  footer {
+    justify-content: center;
+  }
+  .footer_list li {
+    font-size: 10pt;
+  }
+  .footer_list li a {
+    font-size: 10pt;
+  }
+}
